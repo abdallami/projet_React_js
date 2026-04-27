@@ -41,7 +41,8 @@ L'application sera accessible à `http://localhost:3000`.
 - `pages/` : Pages principales de l'application.
 - `redux/` : Gestion de l'état avec Redux.
   #A quoi resemble le projet voilà
-  <img width="1026" height="551" alt="Captureex" src="https://github.com/user-attachments/assets/028f65a3-0274-4b8d-a670-89ef3e8d1c5c" />
+  <img width="1159" height="486" alt="capturetabel" src="https://github.com/user-attachments/assets/6eb3f962-5c63-450c-8081-b5a96bafa076" />
+
 
 
 # Directives de Contribution
