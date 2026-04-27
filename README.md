@@ -40,6 +40,9 @@ L'application sera accessible à `http://localhost:3000`.
 - `components/` : Composants React réutilisables.
 - `pages/` : Pages principales de l'application.
 - `redux/` : Gestion de l'état avec Redux.
+  #A quoi resemble le projet voilà
+  <img width="1026" height="551" alt="Captureex" src="https://github.com/user-attachments/assets/028f65a3-0274-4b8d-a670-89ef3e8d1c5c" />
+
 
 # Directives de Contribution
 Nous encourageons les contributions! Pour contribuer:
