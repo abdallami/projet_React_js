@@ -88,44 +88,46 @@ function finishselected(){
   setSelectedtodos(new Set());
 }
   return (
-      <div className="flex  justify-center ">
-       < div  className="w-2/3 flex  flex-col gap-5 rounder-2xl p-5 bg-base-300  ">
-       <div className="flex gap-4">
-        <input type="text" name="" id="" placeholder="Entrer une tache" className="input w-full" onChange={(e)=>setInput(e.target.value)}/>
-        <select name="" id="" className="select w-full" value={priority}
+      <div className="flex justify-center min-h-screen bg-base-200">
+       <div className="w-full sm:w-11/12 md:w-4/5 lg:w-2/3 flex flex-col gap-3 sm:gap-5 rounded-2xl p-3 sm:p-5 bg-base-300 mt-3 sm:mt-5 mb-5">
+       
+       <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+        <input type="text" name="" id="" placeholder="Entrer une tache" className="input w-full text-sm sm:text-base" onChange={(e)=>setInput(e.target.value)} value={input}/>
+        <select name="" id="" className="select w-full sm:w-auto text-sm sm:text-base" value={priority}
          onChange={(e)=>setpriority(e.target.value as priority)}>
           <option value="urgent">Urgent</option>
           <option value="Moyenne">Moyenne</option>
           <option value="basse">Basse</option>
         </select>
-        <button className="btn btn-primary" onClick={addtodo}>Ajouter</button>
+        <button className="btn btn-primary btn-sm sm:btn-md w-full sm:w-auto text-xs sm:text-sm" onClick={addtodo}>Ajouter</button>
         </div>
-        <div className=" flex items-center justify-between">
-          <div className="space-y-2 flex-1 h-fit">
-        <div className="flex flex-wrap gap-4">
-          <button className={'btn btn-soft ${filter==="Tous" ? "btn-primary" : ""}'} onClick={() => setFilter("Tous")}>
+        
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
+          <div className="flex-1">
+        <div className="flex flex-wrap gap-2 sm:gap-4">
+          <button className={'btn btn-soft btn-xs sm:btn-sm text-xs sm:text-sm ${filter==="Tous" ? "btn-primary" : ""}'} onClick={() => setFilter("Tous")}>
             { /*afficher nbre total de taches*/ }
             Tous({totalcount})
           </button>
-          <button className={'btn btn-soft ${filter==="urgent" ? "btn-primary" : ""}'} onClick={() => setFilter("urgent")}>
+          <button className={'btn btn-soft btn-xs sm:btn-sm text-xs sm:text-sm ${filter==="urgent" ? "btn-primary" : ""}'} onClick={() => setFilter("urgent")}>
             { /*afficher nbre des taches urgentes*/ }
             Urgent({urgentcount})
           </button>
-          <button className={'btn btn-soft ${filter==="Moyenne" ? "btn-primary" : ""}'} onClick={() => setFilter("Moyenne")}>
+          <button className={'btn btn-soft btn-xs sm:btn-sm text-xs sm:text-sm ${filter==="Moyenne" ? "btn-primary" : ""}'} onClick={() => setFilter("Moyenne")}>
             { /*afficher nbre total de taches Moyenne*/ }
             Moyenne({moyennecount})
           </button>
-          <button className={'btn btn-soft ${filter==="basse" ? "btn-primary" : ""}'} onClick={() => setFilter("basse")}>
+          <button className={'btn btn-soft btn-xs sm:btn-sm text-xs sm:text-sm ${filter==="basse" ? "btn-primary" : ""}'} onClick={() => setFilter("basse")}>
             { /*afficher nbre total de taches Basse*/ }
             Basse({bassecount})
           </button>
          
           </div>
         </div>
-         <button className="btn btn-primary"
+         <button className="btn btn-primary btn-sm sm:btn-md w-full sm:w-auto text-xs sm:text-sm"
          onClick={finishselected}
          disabled={selectedtodos.size===0}>
-            Finir la Sélection({selectedtodos.size})
+            Finir ({selectedtodos.size})
           </button>
           
        </div>
@@ -147,11 +149,11 @@ function finishselected(){
 
           </ul>
         ) : (
-         <div className="flex justify-center items-center flex-col p-5 ">
+         <div className="flex justify-center items-center flex-col p-3 sm:p-5 ">
           <div>
-            <Construction strokeWidth={1} className="w-40  h-40 text-primary"/>
+            <Construction strokeWidth={1} className="w-24 h-24 sm:w-40 sm:h-40 text-primary"/>
           </div>
-          <p className="text-sm">Aucune tâche à afficher</p>
+          <p className="text-xs sm:text-sm">Aucune tâche à afficher</p>
          </div>
         )}
       </div>
