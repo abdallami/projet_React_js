@@ -5,7 +5,7 @@ Ce projet est une application React qui permet aux utilisateurs de parcourir et 
 - **React**
 - **Redux** pour la gestion d'état
 - **React Router** pour la navigation
-- **CSS** pour le style
+- **CSS/Tailwincss** pour le style 
 - **Node.js** pour le backend
 
 # Instructions d'Installation
